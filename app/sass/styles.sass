@@ -1,0 +1,61 @@
+@font-face 
+ font-family: "Bebas"
+ src: url("/fonts/bebasneueregular.woff2") format("woff2")
+ src: url("/fonts/bebasneueregular.woff") format("woff")
+    
+body
+    
+    
+.license-block
+    height: 352px
+    width: 362px
+    position: relative
+    left: 50%
+    transform: translate(-50%)
+    margin-top: 200px
+    background-color: #F8F8F8
+    border: 6px solid #EBEBEB
+    .license-plan-wrapper
+        padding: 16px
+        .license-plan-item-wrapper 
+            display: flex
+            &::active
+                background-color: red
+            label.radio-label 
+                font-family: 'Bebas', sans-serif
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 16px
+                color: #111111
+
+                .license-input
+                    display: none
+
+                .license-radio
+                    display: inline-block
+                    border: 0.7px solid #5A61ED
+                    width: 12px
+                    height: 12px
+                    position: relative
+                    vertical-align: middle
+                    box-sizing: border-box
+                    margin-right: 6px
+                    border-radius: 300px
+                    background-color:#ffffff
+                    &::before
+                        content: ''
+                        background: #5A61ED
+                        width: 6px
+                        height: 6px
+                        opacity: 0
+                        transition: 0.3s
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        border-radius: 300px
+                        transform: translateX(-50%) translateY(-50%)
+                .license-input:checked + .license-radio:before
+                    opacity: 1
+        .plan-active
+            border: 1px solid red
